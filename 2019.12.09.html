@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>京东</title>
+	<link rel="stylesheet" type="text/css" href="C:/Users/Administrator/Desktop/reset/reset.css">
+	<style type="text/css">
+		.jdm{
+			width: 100%;
+			margin: 0 auto;
+		}
+		.jdm_search{
+			width: 100%;
+			height: 40px;
+			background-color: #c91523;
+			position: fixed;
+			top: 0;
+			left: 0;
+		}
+		.jdm_search input{
+			width: 100%;
+			height: 30px;
+			border-radius:15px;
+			padding-left: 25px;
+			box-sizing: border-box; 
+		}
+		.jdm_search .search{
+			position: relative;
+			width: 100%;
+			height: 100%;
+			padding-left: 100px;
+			padding-right: 100px;
+			box-sizing: border-box; 
+			margin: 5px 0;
+		}
+		.jdm_search .jdm_login{
+			display: block;
+			position: absolute;
+			top: 7px;
+			right:10px; 
+			text-decoration: none;
+			font-size: 16px;
+		    color: #fff;
+		}
+		.jdm_search .search_logo{
+			display: block;
+			position: absolute;
+			background-image: url(./img/jd.png);
+			top: 5px;
+			left: 5px;
+			width: 74px;
+			height: 30px;
+		}
+	    .content{
+           width: 100%;
+
+	    }
+	    .slide{
+	    	padding-top: 40px;
+	    }
+	    .slide img{
+	    	width: 100%;
+	    }
+	    .nav{
+	    	width: 100%;
+	    	padding-top: 10px;
+	    }
+	    .nav li{
+
+	    	width: 25%;
+	    	float:left;
+	    }
+	    .nav li a{
+	    	display: block;
+	    	width: 100%;
+	    	text-align: center;
+	    	padding-bottom: 10px;
+	    	text-decoration: none;
+	    }
+	    .nav strong{
+	    	display: block;
+	    	color: skyblue;
+	    	margin: 10px 0;
+	    	font-size: 20px;
+	    }
+	    .nav img{
+	    	width: 40px;
+	    	height: 40px;
+	    }
+	    .seckill{
+	    	width: 100%;
+	    	margin-top: 5px;
+	    	box-sizing: border-box;
+	    	background-color: #fff;
+	    }
+	    .seckill_title h4{
+            float: left;
+            margin-top: 10px;
+            font-size: 20px;
+            color: #ca1327; 
+            padding-left: 25px; 
+	    }
+	    .seckill_title{
+	    	width: 100%;
+	    	height: 40px;
+	    	position: relative;
+
+	    }
+	    .seckill_title .seckill_time{
+            margin-top: 12px;
+            margin-left: 10px;
+	    	float: left;
+	    }
+	    .seckill .more{
+	    	float: right;
+	    	margin-top: 10px;
+	    	padding-right: 5px;
+	    }
+	    .seckill .more a{
+	    	text-decoration: none;
+	    	color: black;
+	    }
+	    .seckill_content{
+	    	width: 100%;
+	    	box-sizing: border-box;
+	    }
+	    .seckill_content ul{
+	    	width: 100%;
+	    	overflow: hidden;
+	    }
+	    .seckill_content li{
+	    	float: left;
+	    	width: 33%;
+	    }
+	    .seckill_content li a{
+	    	display: block;
+	    	position: relative;
+	    }
+	    .seckill_content img{
+	    	padding-bottom: 20px;
+	    	width: 100%;
+	    }.seckill_content li .hot{
+	    	display: block;
+	    	position: absolute;
+	    	top: 50%;
+	    	right: 0;
+	    	background-color: #fdb60a;
+	    	color: #fff;
+	    	border-radius: 13px;
+	    	font-size: 50px;
+	    	padding: 3px 5px;
+	    	width: 100px;
+	    	height: 55px;
+	    }
+	    .seckill_content li .price{
+	    	text-align: center;
+	    	font-size: 50px;
+	    }
+	    .seckill_content li .new{
+	    	display: block;
+	    	color: red;
+
+	    }
+	    .seckill_content li .old{
+	    	display: block;
+	    	color: #666;
+	    	text-decoration: line-through;
+
+
+	    }
+        .seckill_content a{
+        	text-decoration: none;
+        }
+        .super-hot{
+        	width: 100%;
+        	position: relative;
+
+        }
+        .super-hot img{
+           width: 100%;
+        }
+        .super-hot ul{
+        	width: 100%;
+        	position: absolute;
+        	top: 200px;
+        	left: 0;
+        	padding: 0 10px;
+        }
+        .super-hot ul li{
+        	width: 50%;
+        }
+        .super-hot ul li a{
+        	display: black;
+        	width: 100%;
+        }
+        .super-hot .super-hot-l{
+        	float: left;
+        }
+        .super-hot .super-hot-r{
+            float: right;
+        }
+        .hotsale{
+        	width: 100%;
+        	background-color: #fff;
+        }
+        .hotsale ul{
+        	width: 100%;
+        	padding: 0 10px;
+        }
+        .hotsale ul li:first-child a{
+        	display: black;
+        	width: 33.333%;
+        	float: left;
+        }
+        .hotsale ul li:lest-child a{
+        	display: block;
+        	width: 50%;
+        	float: left;
+        }
+        .advert{
+        	width: 100%;
+        	padding: 0 5px;
+        }
+        .advert img{
+        	width: 100%;
+        }
+        .market{
+        	width: 100%;
+        }
+        .theme-title{
+        	height: 34px;
+        	line-height: 34px;
+        	font:50px arial,sans-serif;        	
+        	margin-left: 10px;
+        }
+        .market ul{
+        	width: 100%;
+        	overflow: hidden;
+        	box-sizing: border-box;
+        }
+        .market li{
+        	width: 50%;
+        	float: left;
+        	overflow: hidden;
+        }
+        .market li img{
+        	width:100%;
+        }
+        .market li:last-child a{
+           display: block;
+           float: left;
+           width: 100%;
+        }
+        .theme{
+        	width: 100%；
+        }
+        .theme-content-t-l{
+        	width: 50%;
+        	float: left;
+        }
+        .theme-content-t-l a{
+        	display: block;
+        	width: 100%;
+        }
+        .theme-content a img{
+        	width: 100%;
+        }
+        .theme-content-r-t{
+        	width: 50%;
+        	float: right;
+        	height: 50%;
+
+        }
+        .theme-content-r-b{
+        	width: 50%;
+        	float: right;
+        }
+        .theme-content-r-b a{
+        	display: block;
+        	width: 50%;
+        	float: left;
+        }
+        .theme-content-b{
+        	width: 100%;
+        }
+        .theme-content-b a {
+        	width: 25%;
+        	float: left;
+        	display: block;
+
+        }
+        .toolbar ul li{
+        	width: 20%;
+        	float: left;
+        }
+        .toolbar{
+        	width: 100%;
+        	height: 44px;
+        	position: fixed;
+        	left: 0;
+        	bottom: 0;
+        	background-color:#fff;
+        }
+        .toolbar ul img{
+        	width: auto;
+        	height: 44px;
+        }
+	</style>
+</head>
+<body>
+	<div class="jdm">
+		<header class="jdm_search">
+			<a href="#" class="search_logo"></a>
+			<div class="search">
+				<input type="text" placeholder="100万">
+			</div>
+			<a href="#" class="jdm_login">登录</a>
+		</header>
+	</div>
+	<main class="content">
+		<div class="slide">
+			<ul>
+				<li>
+					<img src="./img/advert_6.jpg">
+				</li>
+			</ul>
+		</div>
+		<!--小导航栏-->
+		<div class="nav">
+			<ul>
+				<li>
+					<a href="#">
+						<img src="./img/img/nav_1.png">
+						<strong>京东超市</strong>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./img/img/nav_2.png">
+						<strong>京东超市</strong>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./img/img/nav_3.png">
+						<strong>京东超市</strong>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./img/img/nav_4.png">
+						<strong>京东超市</strong>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./img/img/nav_5.png">
+						<strong>京东超市</strong>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./img/img/nav_6.png">
+						<strong>京东超市</strong>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./img/img/nav_7.png">
+						<strong>京东超市</strong>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./img/img/nav_8.png">
+						<strong>京东超市</strong>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!--掌上秒杀-->
+		<div class="seckill">
+			<div class="seckill_title">
+				<h4>掌上秒杀</h4>
+				<div class="seckill_time">
+					<span>0</span>
+					<span>0</span>
+					<span>：</span>
+					<span>0</span>
+					<span>0</span>
+					<span>：</span>
+					<span>0</span>
+					<span>0</span>
+				</div>
+				<div class="more">
+					<a href="#">更多秒杀</a>
+				</div>
+			</div>
+			<div class="seckill_content">
+				<ul>
+					<li>
+						<a href="#">
+							<span class="hot">热卖</span>
+							<img src="./img/seckill_1.jpg">
+							<div class="price">
+								<span class="new">￥79</span>
+								<span class="old">￥99</span>
+								
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="hot">超值</span>
+							<img src="./img/seckill_2.jpg">
+							<div class="price">
+								<span class="new">￥199</span>
+								<span class="old">￥269</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="hot">推荐</span>
+							<img src="./img/seckill_3.jpg">
+							<div class="price">
+								<span class="new">￥89</span>
+								<span class="old">￥129</span>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--超级爆品-->
+		<div class="super-hot">
+			<img src="./img/banner_bg.jpg">
+			<ul>
+				<li class="super-hot-l">
+					<a href="#"><img src="./img/banner_1.jpg"></a>
+				</li>
+			
+				<li class="super-hot-r">
+					<a href="#"><img src="./img/banner_2.jpg"></a>
+					<a href="#"><img src="./img/banner_3.jpg"></a>
+				</li>
+			</ul>
+			
+		</div>
+		<!--热卖-->
+		<div class="hotsale">
+		    <ul>
+		    	<li>
+		    		<a href=""><img src="./img/major_1.jpg"></a>
+		    		<a href=""><img src="./img/major_2.jpg"></a>
+		    		<a href=""><img src="./img/major_3.jpg"></a>
+		    	</li>
+		    	<li>
+		    		<a href=""><img src="./img/major_4.jpg"></a>
+		    		<a href=""><img src="./img/major_5.jpg"></a>
+		    		<a href=""><img src="./img/major_6.jpg"></a>
+		    		<a href=""><img src="./img/major_7.jpg"></a>
+		    	</li>
+		    </ul>	
+		</div>
+		<!--广告-->
+		<div class="advert">
+			<img src="./img/advert_1.jpg">
+		</div>
+		<!--特色超市-->
+		<div class="market">
+			<h4 class="theme-title">特色超市</h4>
+			<ul>
+				<li>
+
+				<a href="#">
+					<img src="./img/market_1.jpg">
+				</a>
+			</li>
+				<li>
+				<a href="#">
+					<img src="./img/market_2.jpg">
+				</a> 
+			 </li>
+			 <li>
+				<a href="#">
+					<img src="./img/market_3.jpg">
+				</a>
+			</li>
+			   
+			    <li>
+				<a href="#">
+					<img src="./img/market_4.jpg">
+				</a></li>
+				<li>
+				<a href="#">
+					<img src="./img/market_5.jpg">
+				</a>
+			    </li>
+			</ul>
+			
+		</div>
+		<!--广告-->
+		<div class="advert">
+			<img src="./img/advert_2.jpg">
+		</div>
+		<!--主题街-->
+		<div class="theme">
+			<h4 class="theme-title">主题街</h4>
+		    <div class="theme-content">
+		    	<ul class="theme-content-t">
+		    		<li class="theme-content-t-l">
+		    			<a href="#">
+		    				<img src="./img/theme_1.jpg">
+		    			</a>
+		    			
+		    		</li>
+		    		<li class="theme-content-r-t">
+		    			<a href="#">
+		    				<img src="./img/theme_2.jpg">
+		    			</a>
+		    		</li>
+		    		<li class="theme-content-r-b">
+		    			<a href="#">
+		    				<img src="./img/theme_3.jpg">
+		    			</a>
+		    			<a href="#">
+		    				<img src="./img/theme_4.jpg">
+		    			</a>
+		    			
+		    		</li>
+		    	</ul>
+		    	<ul class="theme-content-b">
+		    		<li>
+		    			<a href="#">
+		    				<img src="./img/theme_5.jpg">
+		    			</a>
+		    			<a href="#">
+		    				<img src="./img/theme_6.jpg">
+		    			</a>
+		    			<a href="#">
+		    				<img src="./img/theme_7.jpg">
+		    			</a>
+		    			<a href="#">
+		    				<img src="./img/theme_8.jpg">
+		    			</a>
+		    			<a href="#">
+		    				<img src="./img/theme_9.jpg">
+		    			</a>
+		    			<a href="#">
+		    				<img src="./img/theme_10.jpg">
+		    			</a>
+		    			<a href="#">
+		    				<img src="./img/theme_11.jpg">
+		    			</a>
+		    			<a href="#">
+		    				<img src="./img/theme_12.jpg">
+		    			</a>
+		    		</li>
+		    	</ul>
+		    </div>
+			
+		</div>		
+	</main>
+	<!--底部-->
+	<footer class="toolbar">
+		<ul>
+			<li>
+				<a href="#">
+					<img src="./img/img/index-icon.png">
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="./img/img/sort-icon.png">
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="./img/img/618-icon.png">
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="./img/img/cart-icon.png">
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="./img/img/center-icon.png">
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="./img/img/index-icon.png">
+				</a>
+			</li>
+		</ul>
+	</footer>
+</body>
+</html>
