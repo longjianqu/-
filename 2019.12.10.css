@@ -1,0 +1,77 @@
+.w{
+	width: 1200px;
+	margin: 0 auto;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+/*小导航模块*/
+.shortcut{
+   height: 25px;
+   line-height: 25px;
+   background-color:#f1f1f1;
+}
+.shortcut ul li{
+	float: left;
+}
+.shortcut .fr ul li{
+	width: 1px;
+	height: 12px;
+	margin: 9px 15px 0;
+}
+.header{
+	position: relative;
+	height: 105px;
+}
+.logo{
+	position: absolute;
+	top: 25px;
+	width: 170px;
+	height: 61px;
+}
+.logo a{
+    display: block;
+    width: 170px;
+    height: 61px;
+    background:url(./images/logo.png);
+    text-indent: -999px;
+    overflow: hidden;
+}
+.search input{
+	float: left;
+	width: 480px;
+	padding-left: 10px;
+}
+.search button{
+	float: left;
+	width: 80px;
+	height: 30px;
+	background-color: #b1191a;
+	font-size: 20px;
+	color: #fff;
+
+}
+.shopcar {
+	position: absolute;
+	right: 60px;
+	top: 25px;
+	width: 140px;
+	height: 35px;
+	line-height: 35px;
+	background-color: #f7f7f7;
+
+}
+.count{
+	position: absolute;
+	top: 5px;
+	left: 105px;
+	height: 14px;
+	line-height: 14px;
+	color: #fff;
+	background-color: red;
+	padding:0 5px;
+	border-radius: 7px 7px 7px 0;
+}
